@@ -1,0 +1,53 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.f-clr-ylw{color:yellow;}
+
+.h-300{
+    height: 300px!important;
+}
+
+.h-550{
+    height: 550px!important;
+}
+
+.wel-eng{
+    /*background-color: #0a53be;*/
+    max-height: 472px;
+    background-image: url("../img/about_bg.png") ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:100%;
+    position: relative;
+    width:100%;
+    margin:0 15px;
+}
+
+.wel-img{
+    padding-left: 12%;
+
+
+}
+
+.choose-section{
+    background-color: #F2F7FA;
+}
+
+.my-caption{
+    /*top:150px;*/
+    height:100%;
+    width:100%;
+    left:0;
+    top:0;
+    background: rgba(0,0,0, 0.7);
+    padding-top:150px;
+}
+
+.inner-caption{
+    width:60%;
+    margin:0 auto;
+}
