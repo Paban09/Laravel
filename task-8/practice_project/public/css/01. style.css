@@ -1,0 +1,30 @@
+.banner-section{
+    height: 550px;
+    background-image: url("../img/31214.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-caption{
+    height:350px;
+    width: 550px;
+    background-color: white;
+    margin-top: 90px;
+    padding: 10px;
+}
+
+.banner-caption-title{
+
+    font-size: 60px;
+    /*font-weight: bold;*/
+}
+
+.btn{
+    border-radius: 0px;
+}
+
+.service-section{
+    background-color: #0b5ed7;
+    color:white;
+}
