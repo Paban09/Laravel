@@ -25,7 +25,19 @@
                 <li><a href="{{route('about')}}" class="nav-link">About</a></li>
                 <li><a href="{{route('courses')}}" class="nav-link">All Course</a></li>
                 <li><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
-                <li><a href="{{route('login-registration')}}" class="nav-link">Login/Registration</a></li>
+
+                @if(Session::get('student_id'))
+                    <li class="dropdown">
+                        <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{Session::get('student_name')}}</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{route('student-dashboard')}}" class="dropdown-item">Dashboard</a></li>
+                            <li><a href="{{route('student-logout')}}" class="dropdown-item">Logout</a></li>
+                        </ul>
+                    </li>
+                @else
+                    <li><a href="{{route('login-registration')}}" class="nav-link">Login/Registration</a></li>
+                @endif
+
             </ul>
         </div>
 

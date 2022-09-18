@@ -9,6 +9,9 @@ use App\Http\Controllers\TeacherDashboardController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\AdminCourseController;
 use App\Http\Controllers\EnrollController;
+use App\Http\Controllers\StudentDashboardController;
+use App\Http\Controllers\StudentAuthController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +30,9 @@ Route::get('/contact-us', [HomeController::class,'contact'])->name('contact');
 Route::get('/login-registration', [HomeController::class,'auth'])->name('login-registration');
 Route::get('/course-detail/{id}', [HomeController::class,'detail'])->name('course-detail');
 
+Route::get('/student/dashboard', [StudentDashboardController::class,'index'])->name('student-dashboard');
+Route::get('/student/logout', [StudentAuthController::class,'logout'])->name('student-logout');
+Route::post('/student/login', [StudentAuthController::class,'login'])->name('student-login');
 
 Route::get('/enroll-now/{id}', [EnrollController::class,'index'])->name('enroll-now');
 Route::post('/new-enroll/{id}', [EnrollController::class,'enroll'])->name('enroll.new');
@@ -44,7 +50,6 @@ Route::get('/course/detail/{id}', [CourseController::class,'detail'])->name('cou
 Route::get('/course/edit/{id}', [CourseController::class,'edit'])->name('course.edit');
 Route::post('/course/update/{id}', [CourseController::class,'update'])->name('course.update');
 Route::get('/course/delete/{id}', [CourseController::class,'delete'])->name('course.delete');
-
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
 
